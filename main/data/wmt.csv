@@ -1,4 +1,4 @@
-Ticker,Date,Open,Close,High,Low,Volume
+ticker,date,open,close,high,low,volume
 WMT,2020-02-21,117.44,118.58,118.75,117.31,5624575
 WMT,2020-02-20,117.21,117.69,118.11,116.86,5023327
 WMT,2020-02-19,119.50,117.68,119.94,117.68,7187771

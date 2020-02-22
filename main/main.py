@@ -9,5 +9,8 @@ api = Api(app)
 
 api.add_resource(StockApi, "/v1/stock/information")
 
-if __name__ == '__main__':
+def main():
     app.run(debug=True)
+
+if __name__ == '__main__':
+    main()

@@ -1,4 +1,4 @@
-import flask_restful import Resource, reqparse
+from flask_restful import Resource, reqparse
 from stock_data import data
 
 class StockApi(Resource):
@@ -12,7 +12,7 @@ class StockApi(Resource):
 
         if ticker in self.stock_datas:
             response = self.stock_datas[ticker]
-            return response, 200;
+            return response, 200
         else:
             return "Could not find Company by that Ticker", 404
 

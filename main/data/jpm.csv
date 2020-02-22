@@ -1,4 +1,4 @@
-Ticker,Date,Open,Close,High,Low,Volume
+ticker,date,open,close,high,low,volume
 JPM,2020-02-21,136.55,135.81,136.92,134.92,9436223
 JPM,2020-02-20,137.17,137.49,138.36,136.53,7422800
 JPM,2020-02-19,136.91,137.49,138.39,136.34,7071399
