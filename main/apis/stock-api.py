@@ -3,11 +3,18 @@ import os
 import sqlite3
 
 path = os.getcwd()
-corrected_path = path[:-17] + 'data/Stocks.DB.db'
+corrected_path = path[:-4] + 'data/StocksDB.db'
 
 class StockApi(Resource):
     def __init__(self):
-        self.stock_datas = data
+        self.companies = {
+            'Walmart': 'WMT',
+            'Oracle': 'ORCL',
+            'JPMorgan': 'JPM',
+            'Visa': 'V',
+            'Snap': 'SNAP'
+        }
+
         self.db = sqlite3.connect(corrected_path)
         self.c = self.db.cursor()
 
@@ -15,12 +22,7 @@ class StockApi(Resource):
         # Need to check if information is inside of database
         # Grab the dates
         # Return to user
-
-        if ticker in self.stock_datas:
-            response = self.stock_datas[ticker]
-            return response, 200
-        else:
-            return "Could not find Company by that Ticker", 404
+        pass
 
     def post(self):
         # TODO:
