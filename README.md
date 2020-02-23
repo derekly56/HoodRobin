@@ -1,3 +1,5 @@
 # HoodRobin Documentation
 
-THis app is better than robinhood.
+HackCU VI project
+
+A (hopefully) better version of RobinHood
