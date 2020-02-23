@@ -7,7 +7,7 @@ import pandas as pd
 app = Flask(__name__)
 api = Api(app)
 
-api.add_resource(StockApi, "/v1/stock/information")
+api.add_resource(StockApi, "/v1/stock/information", "/v1/stock/information/<string:name>")
 
 def main():
     app.run(debug=True)
