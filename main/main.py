@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Api
-from stock-api import StockApi
+from apis.stock_api import StockApi
 import sqlite3
 import pandas as pd
 
