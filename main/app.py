@@ -1,21 +1,22 @@
 # flask app
 from flask import Flask, render_template, request
 import os
-from apis.stock_api import StockApi
+from apis.stock_api import *
 
 app = Flask(__name__)
 #Setup base directory for images
 app.config["IMAGE_UPLOADS"] = os.path.join('static','uploads')
 
-# build connection to back end
-api.add_resource(StockApi, "/v1/stock/information")
-
-@app.route('/v1/stock/')
+@app.route('/')
 def homepage():
     return render_template("homepage.html")
 
-@app.route('/v1/stock/information')
-def get():
-    
+@app.route('/v1/stock/information', methods=['GET'])
+def information():
+    # retrieve URL params
+    name = request.args.get('name', default = 'Walmart', type = str)
+    date = request.args.get('date', default = '2020-02-22', type = str)
+    pass
+
 #start flask apps
 app.run(debug=True)
