@@ -19,20 +19,72 @@
     <div class="row">
         <div class="col s12">
             <div style="text-align:center;" class="card-panel teal lighten-2">
-                <h3>HoodRobin</h2>
+                <h3>HoodRobin</h3>
             </div>
         </div>
     </div>
 
     <!-- GET -->
     <div class="row">
+        <div class="col s12 m4 l3"></div>
+        <div class="col s12 m4 l6">
+            <div style="text-align:center;" class="card-panel blue lighten-2">
+                <b>Get Company's Stock Prices for Given Date</b>
+            </div>
+        </div>
+        <div class="col s12 m4 l3"></div>
+    </div>
+    <div class="row">
         <div class="col s12 m4 l4"></div>
         <div class="col s12 m4 l4">
             <form style="text-align:center;" action="/v1/stock/information" method="GET">
-                <label for="cname">Company Name:</label><br>
-                <input type="text" id="cname" name="cname"><br>
-                <label for="date">Date:</label><br>
+                <label for="name"><b>Company Name:</b></label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="date"><b>Date:</b></label><br>
                 <input type="text" id="date" name="date"><br><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        <div class="col s12 m4 l4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l3"></div>
+        <div class="col s12 m4 l6">
+            <div style="text-align:center;" class="card-panel red lighten-2">
+                <b>Company's Three Highest Stock Prices</b> 
+            </div>
+        </div>
+        <div class="col s12 m4 l3"></div>
+    </div>
+    <div class="row">
+        <div class="col s12 m4 l4"></div>
+        <div class="col s12 m4 l4">
+            <form style="text-align:center;" action="/v1/stock/information/highest" method="GET">
+                <label for="name"><b>Company Name:</b></label><br>
+                <input type="text" id="name" name="name"><br>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+        <div class="col s12 m4 l4"></div>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12 m4 l3"></div>
+        <div class="col s12 m4 l6">
+            <div style="text-align:center;" class="card-panel purple lighten-3">
+                <b>Company's Three Lowest Stock Prices</b> 
+            </div>
+        </div>
+        <div class="col s12 m4 l3"></div>
+    </div>
+    <div class="row">
+        <div class="col s12 m4 l4"></div>
+        <div class="col s12 m4 l4">
+            <form style="text-align:center;" action="/v1/stock/information/lowest" method="GET">
+                <label for="name"><b>Company Name:</b></label><br>
+                <input type="text" id="name" name="name"><br>
                 <input type="submit" value="Search">
             </form>
         </div>

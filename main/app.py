@@ -65,7 +65,7 @@ def information_lowest():
         return "Company information not currently tracked", 404
 
 @app.route('/v1/stock/information/highest', methods=['GET'])
-def highest():
+def information_highest():
     # retrieve URL params
     name = request.args.get('name', default = '', type = str)
     path_db = os.getcwd() + '/data/StocksDB.db'
@@ -121,7 +121,7 @@ def information():
 
         if date:
             search_query = """
-                select * from stock where (ticker == '{0}' AND date == '2020-02-21');
+                select * from stock where (ticker == '{0}' AND date == '{1}');
             """.format(ticker_name, date)
 
             query = cursor.execute(search_query)
@@ -130,8 +130,6 @@ def information():
             ans = {}
 
             for row in rows:
-                sub_ans = {}
-
                 ans['ticker'] = row[0]
                 ans['date'] = row[1]
                 ans['open'] = row[2]
